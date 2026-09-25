@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Voting App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap" id="app">
+
+    <!-- HEADER -->
+    <header class="head">
+      <h1 class="app-title">Mini Voting App</h1>
+      <div class="head-btns">
+        <button class="btn-ghost" id="resetBtn">🔄 Reset</button>
+        <button class="btn-ghost" id="fsBtn">⛶ Fullscreen</button>
+      </div>
+    </header>
+
+    <!-- PANEL -->
+    <main class="panel">
+      <div class="panel-top">
+        <div>
+          <span class="badge">LIVE POLL</span>
+          <h2 class="question">What should we build next? 🚀</h2>
+          <p class="sub">Vote satu project yang paling ingin kamu buat berikutnya.</p>
+        </div>
+        <div class="total-box">
+          <small>Total Votes</small>
+          <strong id="totalVotes">0</strong>
+        </div>
+      </div>
+
+      <!-- KARTU KANDIDAT -->
+      <section class="cards">
+        <!-- 1 -->
+        <article class="card">
+          <div class="card-top"><span class="emoji">🎮</span></div>
+          <div class="card-body">
+            <h3>Mini Game</h3>
+            <p class="desc">Project game sederhana dengan JavaScript.</p>
+            <div class="meta">
+              <span class="count">🗳️ <b id="votes-game">0</b> vote</span>
+              <span class="pct" id="pct-game">0%</span>
+            </div>
+            <div class="bar"><i id="bar-game"></i></div>
+            <button class="vote-btn" id="btn-game" data-name="Mini Game" data-emoji="🎮">Vote 🎮</button>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="card">
+          <div class="card-top"><span class="emoji">🛒</span></div>
+          <div class="card-body">
+            <h3>Mini Store</h3>
+            <p class="desc">Simulasi toko online dan shopping cart.</p>
+            <div class="meta">
+              <span class="count">🗳️ <b id="votes-store">0</b> vote</span>
+              <span class="pct" id="pct-store">0%</span>
+            </div>
+            <div class="bar"><i id="bar-store"></i></div>
+            <button class="vote-btn" id="btn-store" data-name="Mini Store" data-emoji="🛒">Vote 🛒</button>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="card">
+          <div class="card-top"><span class="emoji">📝</span></div>
+          <div class="card-body">
+            <h3>To-Do App</h3>
+            <p class="desc">Aplikasi daftar tugas dengan dynamic DOM.</p>
+            <div class="meta">
+              <span class="count">🗳️ <b id="votes-todo">0</b> vote</span>
+              <span class="pct" id="pct-todo">0%</span>
+            </div>
+            <div class="bar"><i id="bar-todo"></i></div>
+            <button class="vote-btn" id="btn-todo" data-name="To-Do App" data-emoji="📝">Vote 📝</button>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="card">
+          <div class="card-top"><span class="emoji">🧠</span></div>
+          <div class="card-body">
+            <h3>Quiz App</h3>
+            <p class="desc">Quiz interaktif dengan score dan feedback.</p>
+            <div class="meta">
+              <span class="count">🗳️ <b id="votes-quiz">0</b> vote</span>
+              <span class="pct" id="pct-quiz">0%</span>
+            </div>
+            <div class="bar"><i id="bar-quiz"></i></div>
+            <button class="vote-btn" id="btn-quiz" data-name="Quiz App" data-emoji="🧠">Vote 🧠</button>
+          </div>
+        </article>
+      </section>
+
+      <!-- CURRENT LEADER -->
+      <section class="leader">
+        <div>
+          <span class="leader-label">🏆 CURRENT LEADER</span>
+          <h3 id="leaderName">Belum ada vote</h3>
+          <p id="leaderInfo">Klik salah satu tombol vote untuk memulai polling.</p>
+        </div>
+        <span class="trophy">🏆</span>
+      </section>
+
+      <!-- FEEDBACK -->
+      <p class="feedback" id="feedback">Silakan pilih salah satu project di atas 👆</p>
+    </main>
+
+    <footer class="foot">
+      <b>📌 Demo Guru</b>
+      <span>Core: click event + counter + DOM update. Bonus: progress bar, current leader, reset, dan fullscreen.</span>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
